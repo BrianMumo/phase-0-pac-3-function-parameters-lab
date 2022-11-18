@@ -16,13 +16,19 @@ introductionWithLanguage(Aki,Ember.js);
 
 function introductionWithLanguageOptional(name, language){
 
-    if(language===null){
 
-        return `Hi, my name is ${name} and I am learning to program in Javascript.`
+
+    if(name && language){
+
+        return `Hi, my name is ${name} and I am learning to program in ${language}.`;
 
     }
-    else{
-        return `Hi, my name is ${name} and I am learning to program in ${language}.`
+    else if(language === undefined) {
+        return `Hi, my name is ${name} and I am learning to program in JavaScript.`;
+    }
+    else {
+
+        return `Hi, my name is name and I am learning to program in language.`;
     }
 
 };
